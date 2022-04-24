@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb-typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/function-component-definition": [2, {"namedComponents": "arrow-function", "unnamedComponents": "arrow-function"}],
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": ["error", { "extensions": [".ts", ".tsx", ".js", ".jsx"] }],
+    "react/jsx-max-props-per-line": 1,
+    "react/jsx-props-no-spreading": ["error", {"custom": "ignore", "exceptions": ["div"]}],
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": ["off"],
+    "import/extensions": ["error", "ignorePackages", {"js": "never", "jsx": "never", "ts": "never", "tsx": "never"}],
+    "jsx-a11y/label-has-associated-control": ["off"],
+    "indent": ["error", 2, {"ignoredNodes": ["TemplateLiteral"]}],
+    "no-underscore-dangle": ["error", {"allowAfterThis": true}],
+    "camelcase": ["off"],
+    "no-console": ["error"],
+    "max-len": ["warn", 1000],
+    "no-param-reassign": 0,
+    "template-curly-spacing": 0,
+    "no-unsafe-optional-chaining": 0
+  }
+}
